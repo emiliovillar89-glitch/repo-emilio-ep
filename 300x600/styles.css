@@ -288,7 +288,7 @@ h3 {
 }
 
 .choice,
-.reset {
+.info-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -304,8 +304,8 @@ h3 {
 
 .choice:hover,
 .choice:focus-visible,
-.reset:hover,
-.reset:focus-visible {
+.info-link:hover,
+.info-link:focus-visible {
   transform: translateY(-2px);
   background: rgba(101,255,143,.24);
   border-color: rgba(101,255,143,.65);
@@ -337,7 +337,8 @@ h3 {
   line-height: 1.35;
 }
 
-.reset {
+.info-link {
+  display: inline-flex;
   min-height: 34px;
   padding-inline: 12px;
   color: #06192e;
@@ -345,6 +346,7 @@ h3 {
   border: 0;
   font-size: 12px;
   font-weight: 800;
+  text-decoration: none;
 }
 
 .store-buttons {

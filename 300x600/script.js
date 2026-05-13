@@ -1,7 +1,7 @@
 const QUESTIONS = [
   {
-    text: '¿Cómo termina el próximo partido de Uruguay?',
-    ariaLabel: 'Elegí cómo termina el próximo partido de Uruguay',
+    text: '¿Cómo termina el primer partido de Uruguay?',
+    ariaLabel: 'Elegí cómo termina el primer partido de Uruguay',
     options: [
       { label: 'Gana Uruguay', country: 'Uruguay' },
       { label: 'Empata' },
@@ -52,7 +52,6 @@ const choices = document.querySelector('#choices');
 const dots = [...document.querySelectorAll('.progress-dot')];
 const resultPanel = document.querySelector('#resultPanel');
 const summary = document.querySelector('#summary');
-const resetButton = document.querySelector('#resetQuiz');
 
 let rotationOffset = Math.floor(Date.now() / 10000) % QUESTIONS.length;
 let roundQuestions = getRoundQuestions();
@@ -155,13 +154,6 @@ banner.addEventListener('click', (event) => {
   const button = event.target.closest('.choice');
   if (!button) return;
   pickAnswer(button);
-});
-
-resetButton.addEventListener('click', () => {
-  answers = [];
-  rotationOffset = (rotationOffset + QUESTIONS_PER_ROUND) % QUESTIONS.length;
-  roundQuestions = getRoundQuestions();
-  showStep(0);
 });
 
 showStep(currentStep);
