@@ -204,7 +204,7 @@ h1 {
 }
 
 .hero {
-  padding: 42px 20px 0;
+  padding: 236px 20px 0;
 }
 
 h2 {
@@ -218,7 +218,7 @@ h2 {
 .quiz-card {
   position: relative;
   min-height: 176px;
-  margin: 54px 14px 0;
+  margin: 42px 14px 0;
   padding: 12px 14px;
   background: linear-gradient(150deg, rgba(255,255,255,.18), rgba(255,255,255,.07));
   border: 1px solid rgba(255, 255, 255, .24);
