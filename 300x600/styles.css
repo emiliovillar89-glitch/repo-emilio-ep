@@ -157,20 +157,20 @@ a {
 .brand-bar {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 18px 18px 0;
+  gap: 12px;
+  padding: 20px 20px 0;
 }
 
 .brand-mark {
   display: grid;
-  width: 44px;
-  height: 44px;
+  width: 54px;
+  height: 54px;
   padding: 0;
   place-items: stretch;
   overflow: hidden;
   background: #49a856;
-  border-radius: 14px;
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.34);
+  border-radius: 16px;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.4);
 }
 
 .brand-logo {
@@ -193,16 +193,19 @@ a {
 .eyebrow {
   color: var(--green);
   font-size: 9px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, .35);
 }
 
 h1 {
-  margin: 1px 0 0;
-  font-size: 20px;
-  line-height: 1;
+  margin: 2px 0 0;
+  font-size: 24px;
+  line-height: .94;
+  letter-spacing: -.04em;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, .42);
 }
 
 .hero {
-  padding: 14px 18px 0;
+  padding: 12px 20px 0;
 }
 
 .tag {
@@ -218,13 +221,13 @@ h1 {
 h2 {
   margin: 8px 0 6px;
   max-width: 250px;
-  font-size: 30px;
+  font-size: 31px;
   line-height: .94;
   letter-spacing: -.05em;
 }
 
 .copy {
-  max-width: 245px;
+  max-width: 250px;
   margin: 0;
   color: var(--soft);
   font-size: 13px;
@@ -234,7 +237,7 @@ h2 {
 .quiz-card {
   position: relative;
   min-height: 176px;
-  margin: 14px 14px 0;
+  margin: 12px 14px 0;
   padding: 12px 14px;
   background: linear-gradient(150deg, rgba(255,255,255,.18), rgba(255,255,255,.07));
   border: 1px solid rgba(255, 255, 255, .24);
