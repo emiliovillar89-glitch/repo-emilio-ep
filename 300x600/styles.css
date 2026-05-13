@@ -320,15 +320,14 @@ h3 {
 }
 
 .choice-flag {
-  display: inline-grid;
+  display: block;
   width: 22px;
   height: 22px;
-  place-items: center;
   flex: 0 0 auto;
-  font-size: 17px;
-  line-height: 1;
+  object-fit: cover;
   background: rgba(255,255,255,.14);
   border-radius: 999px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,.22);
 }
 
 .result-panel p:not(.micro) {

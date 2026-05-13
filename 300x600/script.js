@@ -38,9 +38,9 @@ const QUESTIONS = [
 ];
 
 const COUNTRY_FLAGS = {
-  Argentina: '🇦🇷',
-  Francia: '🇫🇷',
-  Uruguay: '🇺🇾',
+  Argentina: { code: 'ar', alt: 'Bandera de Argentina' },
+  Francia: { code: 'fr', alt: 'Bandera de Francia' },
+  Uruguay: { code: 'uy', alt: 'Bandera de Uruguay' },
 };
 
 const QUESTIONS_PER_ROUND = 3;
@@ -66,7 +66,19 @@ function getRoundQuestions() {
 }
 
 function getOptionFlag(option) {
-  return option.flag || COUNTRY_FLAGS[option.country] || COUNTRY_FLAGS[option.label] || '';
+  return option.flag || COUNTRY_FLAGS[option.country] || COUNTRY_FLAGS[option.label] || null;
+}
+
+function createFlagImage(flagData) {
+  const image = document.createElement('img');
+  image.className = 'choice-flag';
+  image.src = `https://flagcdn.com/w40/${flagData.code}.png`;
+  image.srcset = `https://flagcdn.com/w80/${flagData.code}.png 2x`;
+  image.alt = flagData.alt;
+  image.width = 22;
+  image.height = 22;
+  image.loading = 'lazy';
+  return image;
 }
 
 function createOptionButton(option) {
@@ -77,11 +89,7 @@ function createOptionButton(option) {
 
   const optionFlag = getOptionFlag(option);
   if (optionFlag) {
-    const flag = document.createElement('span');
-    flag.className = 'choice-flag';
-    flag.setAttribute('aria-hidden', 'true');
-    flag.textContent = optionFlag;
-    button.append(flag);
+    button.append(createFlagImage(optionFlag));
   }
 
   const label = document.createElement('span');
