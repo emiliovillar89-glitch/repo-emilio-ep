@@ -204,7 +204,12 @@ h1 {
 }
 
 .hero {
-  padding: 28px 20px 0;
+  position: absolute;
+  z-index: 1;
+  top: 370px;
+  right: 20px;
+  left: 20px;
+  padding: 0;
 }
 
 h2 {

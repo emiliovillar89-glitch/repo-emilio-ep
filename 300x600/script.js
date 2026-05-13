@@ -129,7 +129,7 @@ function showResult() {
   questionPanel.classList.remove('is-active');
   dots.forEach((dot) => dot.classList.add('is-active'));
   resultPanel.classList.add('is-active');
-  summary.textContent = 'Pronosticá todos los resultados en Ovación Penca.';
+  summary.textContent = 'Armá tu penca en Ovación.';
   resultPanel.focus({ preventScroll: true });
 }
 
