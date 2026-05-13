@@ -182,8 +182,7 @@ a {
 }
 
 .eyebrow,
-.micro,
-.tag {
+.micro {
   margin: 0;
   text-transform: uppercase;
   letter-spacing: .11em;
@@ -205,39 +204,21 @@ h1 {
 }
 
 .hero {
-  padding: 12px 20px 0;
-}
-
-.tag {
-  display: inline-flex;
-  padding: 6px 8px;
-  color: #09210f;
-  background: var(--green);
-  border-radius: 999px;
-  font-size: 9px;
-  box-shadow: 0 8px 18px rgba(101, 255, 143, .23);
+  padding: 42px 20px 0;
 }
 
 h2 {
-  margin: 8px 0 6px;
+  margin: 0;
   max-width: 250px;
   font-size: 31px;
   line-height: .94;
   letter-spacing: -.05em;
 }
 
-.copy {
-  max-width: 250px;
-  margin: 0;
-  color: var(--soft);
-  font-size: 13px;
-  line-height: 1.35;
-}
-
 .quiz-card {
   position: relative;
   min-height: 176px;
-  margin: 12px 14px 0;
+  margin: 54px 14px 0;
   padding: 12px 14px;
   background: linear-gradient(150deg, rgba(255,255,255,.18), rgba(255,255,255,.07));
   border: 1px solid rgba(255, 255, 255, .24);
