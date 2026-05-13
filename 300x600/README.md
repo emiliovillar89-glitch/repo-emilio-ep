@@ -6,7 +6,7 @@ Banner estático e interactivo inspirado en la landing de Penca Ovación para pr
 
 - `index.html`: estructura del anuncio de 300x600 con preguntas interactivas.
 - `styles.css`: dirección visual, layout fijo, animaciones y estados responsive/accesibles.
-- `script.js`: flujo de quiz de 3 pasos, resumen final y reinicio.
+- `script.js`: banco editable de preguntas, rotación de 3 preguntas por ronda, banderitas para opciones de países, resumen final y reinicio.
 
 ## Uso
 

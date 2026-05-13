@@ -298,8 +298,11 @@ h3 {
 }
 
 .choice,
-.score,
 .reset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   min-height: 39px;
   color: var(--white);
   background: rgba(255,255,255,.12);
@@ -311,8 +314,6 @@ h3 {
 
 .choice:hover,
 .choice:focus-visible,
-.score:hover,
-.score:focus-visible,
 .reset:hover,
 .reset:focus-visible {
   transform: translateY(-2px);
@@ -321,12 +322,23 @@ h3 {
   outline: none;
 }
 
-.choice.is-picked,
-.score.is-picked {
+.choice.is-picked {
   color: #06192e;
   background: var(--green);
   border-color: var(--green);
   font-weight: 900;
+}
+
+.choice-flag {
+  display: inline-grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  flex: 0 0 auto;
+  font-size: 17px;
+  line-height: 1;
+  background: rgba(255,255,255,.14);
+  border-radius: 999px;
 }
 
 .result-panel p:not(.micro) {

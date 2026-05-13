@@ -42,34 +42,10 @@
             <span class="progress-dot"></span>
           </div>
 
-          <div class="question-panel is-active" data-step="0">
-            <p class="micro">Pregunta 1 de 3</p>
-            <h3>¿Quién llega más lejos?</h3>
-            <div class="choices" role="group" aria-label="Elegí una selección">
-              <button type="button" class="choice" data-answer="Uruguay">🇺🇾 Uruguay</button>
-              <button type="button" class="choice" data-answer="Argentina">🇦🇷 Argentina</button>
-              <button type="button" class="choice" data-answer="Brasil">🇧🇷 Brasil</button>
-            </div>
-          </div>
-
-          <div class="question-panel" data-step="1">
-            <p class="micro">Pregunta 2 de 3</p>
-            <h3>¿Cuántos goles habrá?</h3>
-            <div class="choices choices-grid" role="group" aria-label="Elegí cantidad de goles">
-              <button type="button" class="choice" data-answer="0-1 gol">0-1</button>
-              <button type="button" class="choice" data-answer="2-3 goles">2-3</button>
-              <button type="button" class="choice" data-answer="4+ goles">4+</button>
-            </div>
-          </div>
-
-          <div class="question-panel" data-step="2">
-            <p class="micro">Pregunta 3 de 3</p>
-            <h3>Marcá tu resultado</h3>
-            <div class="score-pick" aria-label="Elegí un resultado">
-              <button type="button" class="score" data-answer="2-1">2-1</button>
-              <button type="button" class="score" data-answer="1-0">1-0</button>
-              <button type="button" class="score" data-answer="Empate">1-1</button>
-            </div>
+          <div class="question-panel is-active" id="questionPanel" data-step="0">
+            <p class="micro" id="questionCounter">Pregunta 1 de 3</p>
+            <h3 id="questionText">¿Quién llega más lejos?</h3>
+            <div class="choices" id="choices" role="group" aria-label="Elegí una respuesta"></div>
           </div>
 
           <div class="result-panel" id="resultPanel" tabindex="-1">
