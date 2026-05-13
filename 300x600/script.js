@@ -55,6 +55,42 @@ const QUESTIONS = [
       { label: '1-1' },
     ],
   },
+  {
+    text: '¿Cómo termina el próximo partido de Uruguay?',
+    ariaLabel: 'Elegí cómo termina el próximo partido de Uruguay',
+    options: [
+      { label: 'Gana Uruguay', flag: '🇺🇾' },
+      { label: 'Empata' },
+      { label: 'Pierde Uruguay', flag: '🇺🇾' },
+    ],
+  },
+  {
+    text: '¿Quién gana el Mundial?',
+    ariaLabel: 'Elegí quién gana el Mundial',
+    options: [
+      { label: 'Uruguay', flag: '🇺🇾' },
+      { label: 'Argentina', flag: '🇦🇷' },
+      { label: 'Francia', flag: '🇫🇷' },
+    ],
+  },
+  {
+    text: '¿Hasta dónde llega Uruguay?',
+    ariaLabel: 'Elegí hasta dónde llega Uruguay',
+    options: [
+      { label: 'Fase de grupos', flag: '🇺🇾' },
+      { label: 'Octavos o cuartos', flag: '🇺🇾' },
+      { label: 'Semifinal o más', flag: '🇺🇾' },
+    ],
+  },
+  {
+    text: '¿Quién hace el primer gol celeste?',
+    ariaLabel: 'Elegí quién hace el primer gol celeste',
+    options: [
+      { label: 'Darwin' },
+      { label: 'Valverde' },
+      { label: 'Otro jugador' },
+    ],
+  },
 ];
 
 const QUESTIONS_PER_ROUND = 3;
