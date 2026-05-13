@@ -3,27 +3,27 @@ const QUESTIONS = [
     text: '¿Cómo termina el próximo partido de Uruguay?',
     ariaLabel: 'Elegí cómo termina el próximo partido de Uruguay',
     options: [
-      { label: 'Gana Uruguay', flag: '🇺🇾' },
+      { label: 'Gana Uruguay', country: 'Uruguay' },
       { label: 'Empata' },
-      { label: 'Pierde Uruguay', flag: '🇺🇾' },
+      { label: 'Pierde Uruguay', country: 'Uruguay' },
     ],
   },
   {
     text: '¿Quién gana el Mundial?',
     ariaLabel: 'Elegí quién gana el Mundial',
     options: [
-      { label: 'Uruguay', flag: '🇺🇾' },
-      { label: 'Argentina', flag: '🇦🇷' },
-      { label: 'Francia', flag: '🇫🇷' },
+      { label: 'Uruguay', country: 'Uruguay' },
+      { label: 'Argentina', country: 'Argentina' },
+      { label: 'Francia', country: 'Francia' },
     ],
   },
   {
     text: '¿Hasta dónde llega Uruguay?',
     ariaLabel: 'Elegí hasta dónde llega Uruguay',
     options: [
-      { label: 'Fase de grupos', flag: '🇺🇾' },
-      { label: 'Octavos o cuartos', flag: '🇺🇾' },
-      { label: 'Semifinal o más', flag: '🇺🇾' },
+      { label: 'Fase de grupos', country: 'Uruguay' },
+      { label: 'Octavos o cuartos', country: 'Uruguay' },
+      { label: 'Semifinal o más', country: 'Uruguay' },
     ],
   },
   {
@@ -36,6 +36,12 @@ const QUESTIONS = [
     ],
   },
 ];
+
+const COUNTRY_FLAGS = {
+  Argentina: '🇦🇷',
+  Francia: '🇫🇷',
+  Uruguay: '🇺🇾',
+};
 
 const QUESTIONS_PER_ROUND = 3;
 const banner = document.querySelector('#banner');
@@ -59,17 +65,22 @@ function getRoundQuestions() {
   });
 }
 
+function getOptionFlag(option) {
+  return option.flag || COUNTRY_FLAGS[option.country] || COUNTRY_FLAGS[option.label] || '';
+}
+
 function createOptionButton(option) {
   const button = document.createElement('button');
   button.type = 'button';
   button.className = 'choice';
   button.dataset.answer = option.label;
 
-  if (option.flag) {
+  const optionFlag = getOptionFlag(option);
+  if (optionFlag) {
     const flag = document.createElement('span');
     flag.className = 'choice-flag';
     flag.setAttribute('aria-hidden', 'true');
-    flag.textContent = option.flag;
+    flag.textContent = optionFlag;
     button.append(flag);
   }
 
