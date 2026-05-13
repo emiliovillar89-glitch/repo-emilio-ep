@@ -402,21 +402,10 @@ h3 {
 }
 
 .store-icon {
-  display: inline-grid;
-  width: 18px;
-  height: 18px;
-  place-items: center;
+  display: block;
+  width: 20px;
+  height: 20px;
   flex: 0 0 auto;
-  font-size: 17px;
-  line-height: 1;
-}
-
-.store-icon--play {
-  width: 0;
-  height: 0;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  border-left: 13px solid var(--white);
 }
 
 .brand-footer {
