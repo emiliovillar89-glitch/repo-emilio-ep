@@ -149,7 +149,7 @@ a {
 .hero,
 .quiz-card,
 .cta,
-.legal {
+.brand-footer {
   position: relative;
   z-index: 1;
 }
@@ -182,7 +182,6 @@ a {
 
 .eyebrow,
 .micro,
-.legal,
 .tag {
   margin: 0;
   text-transform: uppercase;
@@ -376,14 +375,30 @@ h3 {
   border-radius: 50%;
 }
 
-.legal {
+.brand-footer {
   position: absolute;
   right: 0;
-  bottom: 14px;
+  bottom: 12px;
   left: 0;
-  color: rgba(255,255,255,.5);
-  text-align: center;
-  font-size: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+}
+
+.brand-footer img {
+  display: block;
+  max-width: 70px;
+  max-height: 16px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: .72;
+}
+
+.brand-footer span {
+  width: 1px;
+  height: 13px;
+  background: rgba(255,255,255,.34);
 }
 
 @keyframes float {
