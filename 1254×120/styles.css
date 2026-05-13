@@ -26,11 +26,11 @@ button, a { font: inherit; }
   position: relative;
   isolation: isolate;
   display: grid;
-  grid-template-columns: 220px 300px minmax(0, 1fr) 248px 124px;
+  grid-template-columns: 250px 260px minmax(0, 1fr) 150px 112px;
   align-items: center;
-  gap: 16px;
+  gap: 18px;
   overflow: hidden;
-  padding: 14px 18px;
+  padding: 12px 18px;
   color: var(--white);
   background:
     radial-gradient(circle at 16% 0%, rgba(101,255,143,.36), transparent 25%),
@@ -75,17 +75,17 @@ button, a { font: inherit; }
   border-radius: 3px;
   animation: float 4.6s ease-in-out infinite;
 }
-.confetti span:nth-child(1) { left: 515px; top: 18px; background: var(--green); animation-delay: -.8s; }
-.confetti span:nth-child(2) { left: 850px; top: 84px; background: #37d6ff; animation-delay: -1.7s; }
-.confetti span:nth-child(3) { left: 1110px; top: 26px; background: var(--gold); animation-delay: -.2s; }
+.confetti span:nth-child(1) { left: 525px; top: 18px; background: var(--green); animation-delay: -.8s; }
+.confetti span:nth-child(2) { left: 860px; top: 84px; background: #37d6ff; animation-delay: -1.7s; }
+.confetti span:nth-child(3) { left: 1160px; top: 26px; background: var(--gold); animation-delay: -.2s; }
 .confetti span:nth-child(4) { left: 380px; top: 92px; background: #ff6e91; animation-delay: -2.6s; }
 
 .brand-bar {
   display: flex;
   align-items: center;
-  gap: 11px;
+  gap: 12px;
   min-width: 0;
-  padding-left: 10px;
+  padding-left: 220px;
 }
 
 .brand-mark {
@@ -132,19 +132,17 @@ h1 { margin: 1px 0 0; font-size: 21px; line-height: 1; white-space: nowrap; }
 }
 h2 {
   margin: 7px 0 0;
-  max-width: 300px;
+  max-width: 260px;
   font-size: 24px;
   line-height: .92;
   letter-spacing: -.05em;
 }
 
-.action-area {
-  min-width: 0;
-}
+.action-area { min-width: 0; }
 
 .quiz-card,
 .result-panel {
-  min-height: 86px;
+  min-height: 96px;
   padding: 10px 12px;
   background: linear-gradient(150deg, rgba(255,255,255,.18), rgba(255,255,255,.07));
   border: 1px solid rgba(255,255,255,.24);
@@ -164,12 +162,11 @@ h2 {
 }
 .progress-dot.is-active { background: var(--gold); }
 .micro { color: var(--gold); font-size: 9px; }
-h3 { margin: 0 0 8px; font-size: 16px; line-height: 1.02; }
+h3 { margin: 0 0 7px; font-size: 16px; line-height: 1.02; }
 
 .choices {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 7px;
+  gap: 5px;
 }
 
 .choice,
@@ -178,20 +175,21 @@ h3 { margin: 0 0 8px; font-size: 16px; line-height: 1.02; }
   align-items: center;
   justify-content: center;
   gap: 6px;
-  min-height: 32px;
+  min-height: 22px;
   color: var(--white);
   background: rgba(255,255,255,.12);
   border: 1px solid rgba(255,255,255,.22);
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   text-decoration: none;
+  font-size: 12px;
   transition: transform .18s ease, background .18s ease, border-color .18s ease;
 }
 .choice:hover,
 .choice:focus-visible,
 .info-link:hover,
 .info-link:focus-visible {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   background: rgba(101,255,143,.24);
   border-color: rgba(101,255,143,.65);
   outline: none;
@@ -204,8 +202,8 @@ h3 { margin: 0 0 8px; font-size: 16px; line-height: 1.02; }
 }
 .choice-flag {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   flex: 0 0 auto;
   object-fit: cover;
   background: rgba(255,255,255,.14);
@@ -213,10 +211,7 @@ h3 { margin: 0 0 8px; font-size: 16px; line-height: 1.02; }
   box-shadow: 0 0 0 1px rgba(255,255,255,.22);
 }
 
-.result-panel {
-  display: none;
-  animation: pop .26s ease both;
-}
+.result-panel { display: none; animation: pop .26s ease both; }
 .result-panel.is-active { display: block; }
 .result-panel p:not(.micro) {
   margin: 0 0 8px;
@@ -260,23 +255,20 @@ h3 { margin: 0 0 8px; font-size: 16px; line-height: 1.02; }
 
 .brand-footer {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 9px;
+  gap: 8px;
 }
 .brand-footer img {
   display: block;
-  max-width: 56px;
+  max-width: 64px;
   max-height: 15px;
   object-fit: contain;
   filter: brightness(0) invert(1);
   opacity: .72;
 }
-.brand-footer span {
-  width: 1px;
-  height: 13px;
-  background: rgba(255,255,255,.34);
-}
+.brand-footer span { display: none; }
 
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(0deg); opacity: .8; }
