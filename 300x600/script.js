@@ -1,61 +1,5 @@
 const QUESTIONS = [
   {
-    text: '¿Quién llega más lejos?',
-    ariaLabel: 'Elegí una selección',
-    options: [
-      { label: 'Uruguay', flag: '🇺🇾' },
-      { label: 'Argentina', flag: '🇦🇷' },
-      { label: 'Brasil', flag: '🇧🇷' },
-    ],
-  },
-  {
-    text: '¿Quién será revelación?',
-    ariaLabel: 'Elegí un país revelación',
-    options: [
-      { label: 'Marruecos', flag: '🇲🇦' },
-      { label: 'Japón', flag: '🇯🇵' },
-      { label: 'Senegal', flag: '🇸🇳' },
-    ],
-  },
-  {
-    text: '¿Quién gana este cruce?',
-    ariaLabel: 'Elegí un país ganador',
-    options: [
-      { label: 'España', flag: '🇪🇸' },
-      { label: 'Francia', flag: '🇫🇷' },
-      { label: 'Inglaterra', flag: '🏴' },
-    ],
-  },
-  {
-    text: '¿Cuántos goles habrá?',
-    ariaLabel: 'Elegí cantidad de goles',
-    compact: true,
-    options: [
-      { label: '0-1' },
-      { label: '2-3' },
-      { label: '4+' },
-    ],
-  },
-  {
-    text: '¿Quién mete primero?',
-    ariaLabel: 'Elegí qué país convierte primero',
-    options: [
-      { label: 'Uruguay', flag: '🇺🇾' },
-      { label: 'México', flag: '🇲🇽' },
-      { label: 'Estados Unidos', flag: '🇺🇸' },
-    ],
-  },
-  {
-    text: 'Marcá tu resultado',
-    ariaLabel: 'Elegí un resultado',
-    compact: true,
-    options: [
-      { label: '2-1' },
-      { label: '1-0' },
-      { label: '1-1' },
-    ],
-  },
-  {
     text: '¿Cómo termina el próximo partido de Uruguay?',
     ariaLabel: 'Elegí cómo termina el próximo partido de Uruguay',
     options: [
@@ -142,7 +86,6 @@ function renderQuestion() {
   questionCounter.textContent = `Pregunta ${currentStep + 1} de ${QUESTIONS_PER_ROUND}`;
   questionText.textContent = question.text;
   choices.setAttribute('aria-label', question.ariaLabel);
-  choices.classList.toggle('choices-grid', Boolean(question.compact));
   choices.replaceChildren(...question.options.map(createOptionButton));
 }
 

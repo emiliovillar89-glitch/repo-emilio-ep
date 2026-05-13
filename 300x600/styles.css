@@ -287,16 +287,6 @@ h3 {
   gap: 8px;
 }
 
-.choices-grid,
-.score-pick {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.score-pick {
-  display: grid;
-  gap: 8px;
-}
-
 .choice,
 .reset {
   display: flex;
