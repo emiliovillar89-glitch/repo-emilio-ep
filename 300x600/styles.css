@@ -163,12 +163,12 @@ a {
 
 .brand-mark {
   display: grid;
-  width: 43px;
-  height: 43px;
-  padding: 7px;
-  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  place-items: stretch;
   overflow: hidden;
-  background: linear-gradient(145deg, var(--white), #b8e6ff);
+  background: #49a856;
   border-radius: 14px;
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.34);
 }
@@ -177,7 +177,8 @@ a {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: inherit;
 }
 
 .eyebrow,
