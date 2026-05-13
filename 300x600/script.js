@@ -129,7 +129,7 @@ function showResult() {
   questionPanel.classList.remove('is-active');
   dots.forEach((dot) => dot.classList.add('is-active'));
   resultPanel.classList.add('is-active');
-  summary.textContent = `Elegiste ${answers.join(' · ')}. Ahora hacé tus pronósticos reales en la app.`;
+  summary.textContent = 'Pronosticá todos los resultados en Ovación Penca.';
   resultPanel.focus({ preventScroll: true });
 }
 
