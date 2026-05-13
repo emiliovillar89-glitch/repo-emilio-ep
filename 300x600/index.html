@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https://d1arj0auhm8wf3.cloudfront.net https://el-pais.brightspotcdn.com https://redirect.elpais.uy https://flagcdn.com; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests" />
     <title>Banner 300x600 | Penca Ovación Mundial 2026</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -21,6 +23,9 @@
               class="brand-logo"
               src="https://d1arj0auhm8wf3.cloudfront.net/uploads/landing/logo.png"
               alt=""
+              referrerpolicy="no-referrer"
+              loading="eager"
+              decoding="async"
             />
           </div>
           <div>
@@ -69,11 +74,17 @@
           <img
             src="https://el-pais.brightspotcdn.com/53/d5/85909f884a3e90ebe867a8035f56/r-logo-ovacion.svg"
             alt="Ovación"
+            referrerpolicy="no-referrer"
+            loading="lazy"
+            decoding="async"
           />
           <span aria-hidden="true"></span>
           <img
             src="https://redirect.elpais.uy/logoteca/logos/el-pais-1.svg"
             alt="El País"
+            referrerpolicy="no-referrer"
+            loading="lazy"
+            decoding="async"
           />
         </footer>
       </section>

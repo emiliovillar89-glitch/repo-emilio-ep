@@ -77,6 +77,8 @@ function createFlagImage(flagData) {
   image.width = 22;
   image.height = 22;
   image.loading = 'lazy';
+  image.decoding = 'async';
+  image.referrerPolicy = 'no-referrer';
   return image;
 }
 
