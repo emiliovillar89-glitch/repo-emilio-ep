@@ -81,13 +81,20 @@ function createFlagImage(flagData) {
   return image;
 }
 
-function createOptionButton(option) {
+function shouldShowFlags(question) {
+  const optionCountries = question.options.map((option) => option.country || option.label);
+  const knownCountries = optionCountries.filter((country) => COUNTRY_FLAGS[country]);
+  const uniqueCountries = new Set(knownCountries);
+  return knownCountries.length > 0 && uniqueCountries.size !== 1;
+}
+
+function createOptionButton(option, showFlags) {
   const button = document.createElement('button');
   button.type = 'button';
   button.className = 'choice';
   button.dataset.answer = option.label;
 
-  const optionFlag = getOptionFlag(option);
+  const optionFlag = showFlags ? getOptionFlag(option) : null;
   if (optionFlag) {
     button.append(createFlagImage(optionFlag));
   }
@@ -105,7 +112,8 @@ function renderQuestion() {
   questionCounter.textContent = `Pregunta ${currentStep + 1} de ${QUESTIONS_PER_ROUND}`;
   questionText.textContent = question.text;
   choices.setAttribute('aria-label', question.ariaLabel);
-  choices.replaceChildren(...question.options.map(createOptionButton));
+  const showFlags = shouldShowFlags(question);
+  choices.replaceChildren(...question.options.map((option) => createOptionButton(option, showFlags)));
 }
 
 function showStep(step) {
