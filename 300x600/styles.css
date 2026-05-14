@@ -115,7 +115,6 @@ a {
   overflow: hidden;
   border-radius: 34px 34px 0 0;
   background:
-    linear-gradient(90deg, transparent 0 49%, rgba(255,255,255,.18) 49% 51%, transparent 51%),
     linear-gradient(0deg, transparent 0 49%, rgba(255,255,255,.16) 49% 51%, transparent 51%);
   opacity: .74;
   transform: perspective(260px) rotateX(56deg) rotateZ(-8deg);
@@ -125,6 +124,18 @@ a {
     pitch-float 4.6s ease-in-out infinite alternate;
 }
 
+.field-lines::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 116px;
+  height: 116px;
+  border: 2px solid rgba(255,255,255,.2);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
 
 .stadium-static {
   position: absolute;
@@ -173,8 +184,8 @@ a {
   gap: 24px;
   width: max-content;
   height: 100%;
-  padding-inline: 16px;
-  animation: stadium-logo-crawl 16s linear infinite;
+  padding-inline: 0;
+  animation: stadium-logo-crawl 18s linear infinite;
 }
 
 .stadium-static__track img {
@@ -498,7 +509,7 @@ h3 {
 
 @keyframes stadium-logo-crawl {
   from { transform: translateX(0); }
-  to { transform: translateX(-196px); }
+  to { transform: translateX(-192px); }
 }
 
 @keyframes pop {
