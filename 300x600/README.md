@@ -1,6 +1,6 @@
-# Banner HTML 300x600 - Penca Ovación
+# Banner HTML 300x600 - Penca Antel Ovación
 
-Banner estático e interactivo inspirado en la landing de Penca Ovación para promocionar una penca del Mundial 2026.
+Banner estático e interactivo inspirado en la landing de Penca Antel Ovación para promocionar una penca del Mundial 2026.
 
 ## Archivos
 
