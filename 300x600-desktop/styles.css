@@ -48,6 +48,9 @@ a {
     radial-gradient(circle at 18% 18%, rgba(55, 214, 255, 0.46), transparent 27%),
     radial-gradient(circle at 85% 6%, rgba(101, 255, 143, 0.4), transparent 26%),
     linear-gradient(165deg, #093f82 0%, #06192e 46%, #020912 100%);
+  background-size: 135% 135%, 150% 150%, 100% 100%;
+  background-position: 0% 0%, 100% 0%, center;
+  animation: stadium-bg-drift 9s ease-in-out infinite alternate;
   border: 1px solid rgba(255, 255, 255, 0.26);
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.52);
 }
@@ -62,7 +65,9 @@ a {
     linear-gradient(90deg, transparent 0 8%, rgba(255,255,255,.16) 8% 9%, transparent 9% 18%) 0 0 / 42px 100%,
     linear-gradient(175deg, transparent 0 48%, rgba(255,255,255,.14) 49% 51%, transparent 52%);
   opacity: 0.38;
-  transform: rotate(-8deg);
+  transform: rotate(-8deg) translateX(-8px);
+  transform-origin: center;
+  animation: stands-sweep 8s ease-in-out infinite alternate;
 }
 
 .banner::after {
@@ -75,6 +80,7 @@ a {
     repeating-linear-gradient(90deg, rgba(255,255,255,.1) 0 2px, transparent 2px 28px),
     radial-gradient(ellipse at center, rgba(101, 255, 143, .45), rgba(5, 60, 30, .28) 52%, transparent 72%);
   border-radius: 50% 50% 0 0;
+  animation: field-glow 5.6s ease-in-out infinite alternate;
 }
 
 .stadium-glow {
@@ -88,6 +94,7 @@ a {
   background: radial-gradient(circle, rgba(255, 211, 90, 0.18), transparent 62%);
   filter: blur(1px);
   z-index: 0;
+  animation: glow-pulse 4.8s ease-in-out infinite alternate;
 }
 
 .field-lines {
@@ -431,6 +438,27 @@ h3 {
 @keyframes pop {
   from { opacity: 0; transform: translateY(7px) scale(.98); }
   to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes stadium-bg-drift {
+  0% { background-position: 0% 0%, 100% 0%, center; }
+  100% { background-position: 22% 18%, 78% 14%, center; }
+}
+
+@keyframes stands-sweep {
+  0% { transform: rotate(-8deg) translateX(-12px); opacity: .28; }
+  50% { opacity: .46; }
+  100% { transform: rotate(-8deg) translateX(18px); opacity: .36; }
+}
+
+@keyframes glow-pulse {
+  0% { opacity: .72; transform: scale(.96); }
+  100% { opacity: 1; transform: scale(1.08); }
+}
+
+@keyframes field-glow {
+  0% { opacity: .66; transform: translateY(0); }
+  100% { opacity: .9; transform: translateY(-10px); }
 }
 
 @keyframes pitch-drift {
