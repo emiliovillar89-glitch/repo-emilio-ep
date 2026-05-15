@@ -6,32 +6,32 @@ const dotsContainer = document.querySelector('#collectiblesDots');
 
 const collectibles = [
   {
-    icon: '🏆',
-    kicker: 'Leyenda',
-    title: 'Copa del mundo',
-    description: 'La pieza dorada para quienes aciertan al campeón antes que nadie.',
-    rarity: 'Épico',
+    icon: '🧩',
+    kicker: 'Colección',
+    title: 'Pieza inicial',
+    description: 'Primer objeto de una serie independiente, listo para presentar la colección.',
+    badge: 'Disponible',
   },
   {
-    icon: '👕',
-    kicker: 'Selección',
-    title: 'Camiseta celeste',
-    description: 'Un coleccionable de hincha para acompañar cada pronóstico de Uruguay.',
-    rarity: 'Raro',
+    icon: '💎',
+    kicker: 'Edición',
+    title: 'Cristal premium',
+    description: 'Una pieza especial para destacar dentro del set de coleccionables.',
+    badge: 'Limitado',
   },
   {
-    icon: '⭐',
-    kicker: 'Figura',
-    title: 'Jugador estrella',
-    description: 'Guardá al crack que puede cambiar la tabla de tu grupo.',
-    rarity: 'Especial',
+    icon: '🎟️',
+    kicker: 'Acceso',
+    title: 'Pase dorado',
+    description: 'Coleccionable destacado para comunicar beneficios o desbloqueos futuros.',
+    badge: 'Especial',
   },
   {
-    icon: '🥅',
-    kicker: 'Partido',
-    title: 'Atajada clave',
-    description: 'Para celebrar esos puntos que se ganan con un resultado exacto.',
-    rarity: 'Nuevo',
+    icon: '📦',
+    kicker: 'Próximo',
+    title: 'Caja sorpresa',
+    description: 'Espacio preparado para sumar nuevos lanzamientos durante los próximos meses.',
+    badge: 'Nuevo',
   },
 ];
 
@@ -63,11 +63,11 @@ function createCollectibleCard(item, index) {
   const description = document.createElement('p');
   description.textContent = item.description;
 
-  const rarity = document.createElement('span');
-  rarity.className = 'rarity';
-  rarity.textContent = item.rarity;
+  const badge = document.createElement('span');
+  badge.className = 'collectible-badge';
+  badge.textContent = item.badge;
 
-  info.append(kicker, title, description, rarity);
+  info.append(kicker, title, description, badge);
   card.append(art, info);
 
   return card;

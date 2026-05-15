@@ -283,7 +283,7 @@ h3 {
   line-height: 1.28;
 }
 
-.rarity {
+.collectible-badge {
   display: inline-flex;
   padding: 5px 8px;
   color: #09210f;
