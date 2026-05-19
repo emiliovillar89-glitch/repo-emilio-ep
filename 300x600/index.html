@@ -29,48 +29,25 @@
           <p class="copy">Pronosticá, armá grupo con amigos y competí por la gloria.</p>
         </section>
 
-        <section class="quiz-card" id="quizCard">
-          <div class="progress" aria-hidden="true">
-            <span class="progress-dot is-active"></span>
-            <span class="progress-dot"></span>
-            <span class="progress-dot"></span>
-          </div>
-
-          <div class="question-panel is-active" data-step="0">
-            <p class="micro">Pregunta 1 de 3</p>
-            <h3>¿Quién llega más lejos?</h3>
-            <div class="choices" role="group" aria-label="Elegí una selección">
-              <button type="button" class="choice" data-answer="Uruguay">🇺🇾 Uruguay</button>
-              <button type="button" class="choice" data-answer="Argentina">🇦🇷 Argentina</button>
-              <button type="button" class="choice" data-answer="Brasil">🇧🇷 Brasil</button>
+        <section class="collectibles-card" aria-labelledby="collectiblesTitle">
+          <div class="collectibles-head">
+            <div>
+              <p class="micro">Coleccionables</p>
+              <h3 id="collectiblesTitle">Explorá la colección</h3>
             </div>
+            <span class="collectibles-counter" id="collectiblesCounter" aria-live="polite">1/4</span>
           </div>
 
-          <div class="question-panel" data-step="1">
-            <p class="micro">Pregunta 2 de 3</p>
-            <h3>¿Cuántos goles habrá?</h3>
-            <div class="choices choices-grid" role="group" aria-label="Elegí cantidad de goles">
-              <button type="button" class="choice" data-answer="0-1 gol">0-1</button>
-              <button type="button" class="choice" data-answer="2-3 goles">2-3</button>
-              <button type="button" class="choice" data-answer="4+ goles">4+</button>
+          <div class="carousel" aria-label="Carrusel de coleccionables">
+            <div class="carousel-window">
+              <div class="carousel-track" id="collectiblesTrack"></div>
             </div>
-          </div>
 
-          <div class="question-panel" data-step="2">
-            <p class="micro">Pregunta 3 de 3</p>
-            <h3>Marcá tu resultado</h3>
-            <div class="score-pick" aria-label="Elegí un resultado">
-              <button type="button" class="score" data-answer="2-1">2-1</button>
-              <button type="button" class="score" data-answer="1-0">1-0</button>
-              <button type="button" class="score" data-answer="Empate">1-1</button>
+            <div class="carousel-controls">
+              <button type="button" class="carousel-arrow" id="prevCollectible" aria-label="Ver coleccionable anterior">‹</button>
+              <div class="carousel-dots" id="collectiblesDots" aria-label="Seleccionar coleccionable"></div>
+              <button type="button" class="carousel-arrow" id="nextCollectible" aria-label="Ver coleccionable siguiente">›</button>
             </div>
-          </div>
-
-          <div class="result-panel" id="resultPanel" tabindex="-1">
-            <p class="micro">¡Listo!</p>
-            <h3>Tu instinto ya está jugando.</h3>
-            <p id="summary">Sumate a la app y competí en grupos privados.</p>
-            <button type="button" class="reset" id="resetQuiz">Volver a jugar</button>
           </div>
         </section>
 
