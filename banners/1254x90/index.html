@@ -6,7 +6,7 @@
   <div class="accent" aria-hidden="true"></div>
   <div class="brand"><img src="assets/logo.svg" alt="Inmuebles El País"></div>
   <section class="message"><h1>Buscá tu próxima casa con<br><span>menos filtros y más conversación.</span></h1><p>Gallito entiende tu intención de búsqueda.</p></section>
-  <form class="search" aria-label="Preparar consulta"><label for="query">Contale al Gallito qué estás buscando</label><div class="field"><input id="query" name="query" maxlength="500" placeholder="Una casa con jardín en Montevideo…" autocomplete="off"><button type="submit" title="Copiar consulta y abrir el sitio">Ir al buscador <span aria-hidden="true">↗</span></button></div></form>
+  <form class="search" aria-label="Preparar consulta"><label for="query">Contale al Gallito qué estás buscando</label><div class="field"><select name="operation" aria-label="Tipo de operación"><option value="" selected>Operación</option><option value="sale">Compra</option><option value="rental">Alquiler</option><option value="temporary_rental">Temporal</option></select><input id="query" name="query" maxlength="500" placeholder="Una casa con jardín en Montevideo…" autocomplete="off" required><button type="submit" title="Buscar propiedades en Gallito">Buscar <span aria-hidden="true">↗</span></button></div><p class="search-status" role="status" aria-live="polite"></p></form>
 </main>
 <script src="script.js"></script>
 </body></html>
