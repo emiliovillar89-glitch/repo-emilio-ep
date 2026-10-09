@@ -10,6 +10,10 @@ python -m http.server 8000
 
 Abrir http://localhost:8000. `index.html` permite repetir la animación. La pieza está en `banners/1254x90/`.
 
+## Diseño
+
+Fondo claro con degradado beige cálido, naranja en palabras del titular, Gallito en el subtítulo y botón de búsqueda. Campo blanco redondeado, inspirado en la referencia del sitio. Se conserva el logo oficial multicolor.
+
 ## Comportamiento final
 
 El logo entra, aparecen titular y subtítulo, y se muestra el buscador. El campo escribe, mantiene y borra tres consultas de ejemplo en secuencia. Tiene cursor de texto; al hacer clic abre **https://inmuebles.elpais.com.uy/** en una nueva pestaña. El botón Buscar tiene el mismo destino. Se puede activar con teclado.
