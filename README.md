@@ -1,6 +1,6 @@
 # Banners — Inmuebles El País
 
-Propuesta HTML5 de **1254 × 90 px**, sin dependencias.
+Familia HTML5 sin dependencias: **1254×90, 320×50, 320×75, 1440×120 y 300×600**.
 
 ## Vista previa
 
@@ -27,3 +27,9 @@ Respeta movimiento reducido con una frase estática y pausa al ocultar la pesta�
 `index.html` del banner declara `var clickTag = "https://inmuebles.elpais.com.uy/";` y `ad.size` de 1254×90. Ambos enlaces usan ese destino configurable. Para el ZIP, comprimir **el contenido** de `banners/1254x90/` (index.html en la raíz, style.css, script.js y assets/logo.svg). No incluir la página de revisión de la raíz del repositorio.
 
 Tráfico debe validar la creatividad en GAM, destino/seguimiento de clics, ventanas nuevas y duración permitida para la animación repetida. Pendiente la revisión visual en navegador y la validación del ZIP en GAM. No se publica automáticamente en hosting.
+
+## Adaptaciones
+
+Cada carpeta tiene HTML, CSS, JavaScript y logo propios para una entrega independiente. En 320×50 y 320×75 se secuencian logo, titular, subtítulo y buscador; el buscador queda visible y empieza a escribir después de 7 segundos. Las frases de ejemplo se acortan para que entren. En 1440×120 y 300×600 se conserva todo el contenido en la composición final. Los colores, animación de logo y salida por clickTag se mantienen.
+
+La galería de la raíz muestra los cinco formatos a tamaño real. Para empaquetar cada variante se debe comprimir el contenido de su carpeta, con index.html en la raíz del ZIP. Pendiente validación visual en navegador y tráfico en GAM.
