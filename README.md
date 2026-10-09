@@ -14,6 +14,10 @@ Visitar http://localhost:8000. La pieza está en `banners/1254x90/` con HTML, CS
 
 Logo de entrada, aparición del titular y subtítulo, y buscador visible al finalizar (4 segundos). Una sola reproducción; al enfocar el campo se detiene la animación. Respeta la preferencia de movimiento reducido. El tamaño es fijo; la página de revisión permite desplazarse horizontalmente.
 
+## Elección de operación
+
+No hay desplegable. Al enviar la consulta se abre un diálogo con Compra, Alquiler y Temporal, conservando el texto. Las tres tarjetas se disponen horizontalmente para respetar los 90 px de altura. Se puede volver a editar con la cruz o Escape; el foco vuelve al campo. La llamada de búsqueda solo se inicia al elegir una operación.
+
 ## Conexión real preparada
 
 Se inspeccionó el código público del sitio el 9/10/2026. El formulario envía `message`, `transactionType` (`sale`, `rental`, `temporary_rental`) y `userLanguage=es` como FormData a `POST /api/chat/init`, con `X-Brand: elpais`. Usa cookies de la sesión del navegador y nunca extrae tokens. Una respuesta exitosa devuelve `data.chatId`; se abre `/dashboard/{chatId}`. Si solicita operación, se utiliza `POST /api/chat/{chatId}/resolve-operation`.

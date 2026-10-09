@@ -3,7 +3,16 @@ const siteOrigin = 'https://inmuebles.elpais.com.uy';
 const banner = document.querySelector('.banner');
 const form = document.querySelector('.search');
 const input = form.querySelector('input');
-const operation = form.querySelector('select');
+const operationDialog = document.querySelector('.operations');
+const operationOptions = [...operationDialog.querySelectorAll('[data-operation]')];
+let pendingQuery = '';
+operationDialog.querySelector('.operation-close').addEventListener('click', () => operationDialog.close());
+operationDialog.addEventListener('close', () => input.focus());
+operationOptions.forEach(option => option.addEventListener('click', () => {
+  const selectedOperation = option.dataset.operation;
+  operationDialog.close();
+  executeSearch(pendingQuery, selectedOperation);
+}));
 const button = form.querySelector('button');
 const status = form.querySelector('.search-status');
 let busy = false;
@@ -12,14 +21,19 @@ function notify(message) {
   status.textContent = message;
   window.parent.postMessage({type:'gallito-preview-status', message}, window.location.origin);
 }
-form.addEventListener('submit', async event => {
+form.addEventListener('submit', event => {
   event.preventDefault();
   if (busy) return;
   const query = input.value.trim();
   if (!query) { input.focus(); return; }
-  if (!operation.value) { notify('Elegí Compra, Alquiler o Temporal.'); operation.focus(); return; }
+  pendingQuery = query;
+  status.textContent = '';
+  operationDialog.showModal();
+});
+async function executeSearch(query, selectedOperation) {
+  if (busy) return;
   if (window.location.origin !== siteOrigin) {
-    notify('La búsqueda real requiere publicar este banner en inmuebles.elpais.com.uy.');
+    notify('La conexión de búsqueda para Google Ad Manager está pendiente.');
     return;
   }
   const resultTab = window.open('about:blank', '_blank');
@@ -31,7 +45,7 @@ form.addEventListener('submit', async event => {
   notify('Gallito está interpretando tu búsqueda…');
   const body = new FormData();
   body.append('message', query);
-  body.append('transactionType', operation.value);
+  body.append('transactionType', selectedOperation);
   body.append('userLanguage', 'es');
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 180000);
@@ -49,7 +63,7 @@ form.addEventListener('submit', async event => {
       const resolution = await fetch(siteOrigin + '/api/chat/' + chatId + '/resolve-operation', {
         method:'POST', credentials:'include',
         headers:{'Content-Type':'application/json','X-Brand':'elpais'},
-        body:JSON.stringify({transactionType:operation.value}), signal:controller.signal
+        body:JSON.stringify({transactionType:selectedOperation}), signal:controller.signal
       });
       const resolved = await resolution.json();
       if (!resolution.ok || !resolved.success) throw new Error('No se pudo confirmar el tipo de operación.');
@@ -65,4 +79,4 @@ form.addEventListener('submit', async event => {
     button.disabled = false;
     button.textContent = 'Buscar';
   }
-});
+}
