@@ -7,3 +7,14 @@ h1 .headline-start{color:var(--ink)}
 
 /* Adaptación 320x50 */
  .banner{width:320px;height:50px;padding:0 10px;display:block}.accent{width:3px}.brand{position:absolute;width:145px;left:88px;top:4px;animation:compact-logo 7s both}.message{position:absolute;inset:0;width:auto;animation:none}.message h1{position:absolute;inset:5px 13px auto;font-size:16px;line-height:1.2;letter-spacing:-.3px;text-align:center;animation:compact-title 7s both}.message p{position:absolute;top:11px;left:42px;right:10px;font-size:13px;line-height:1.15;text-align:center;animation:compact-sub 7s both}.search{position:absolute;left:10px;right:10px;top:16px;animation:compact-search .7s 6.6s both}.search-label{display:none}.field{height:29px;border-radius:17px}.query-preview{font-size:11px;padding:0 8px}.search-button{font-size:11px;padding:0 10px}.search-button span{font-size:14px}.typing-caret{height:13px}@keyframes compact-logo{0%{opacity:0;transform:scale(.75)}10%,20%{opacity:1;transform:scale(1)}32%,88%{opacity:0;transform:scale(1)}100%{opacity:1;left:12px;top:2px;width:43px;transform:none}}@keyframes compact-title{0%,20%{opacity:0;transform:translateY(5px)}30%,62%{opacity:1;transform:none}70%,100%{opacity:0}}@keyframes compact-sub{0%,65%{opacity:0}72%,90%{opacity:1}100%{opacity:0}}@keyframes compact-search{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}@media(prefers-reduced-motion:reduce){.brand{left:12px;top:2px;width:43px}.message{display:none}.search{opacity:1}}
+
+/* Logo centrado que se reduce; textos centrados en ambos ejes. */
+.brand{left:50%;top:50%;transform-origin:center;animation:compact-logo 7s both}
+.message h1{inset:auto 12px auto;top:50%;margin:0;transform:translateY(-50%)}
+.message p{top:50%;left:10px;right:10px;margin:0;transform:translateY(-50%)}
+.search{top:50%;transform:translateY(-50%)}
+@keyframes compact-logo{0%{opacity:0;transform:translate(-50%,-50%) scale(.75)}10%,20%{opacity:1;transform:translate(-50%,-50%) scale(1)}32%,100%{opacity:0;transform:translate(-50%,-50%) scale(.1)}}
+@keyframes compact-title{0%,20%{opacity:0;transform:translateY(calc(-50% + 5px))}30%,62%{opacity:1;transform:translateY(-50%)}70%,100%{opacity:0;transform:translateY(-50%)}}
+@keyframes compact-sub{0%,65%{opacity:0}72%,88%{opacity:1}94%,100%{opacity:0}}
+@keyframes compact-search{from{opacity:0;transform:translateY(calc(-50% + 8px))}to{opacity:1;transform:translateY(-50%)}}
+@media(prefers-reduced-motion:reduce){.brand{display:none}.search{transform:translateY(-50%)}}
