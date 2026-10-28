@@ -5,7 +5,7 @@ const frames = Array.from({length:10},(_,i)=>`${assetBase}car-${String(i).padSta
 const car=document.getElementById('car'),viewer=document.getElementById('viewer');
 const descriptions=['tres cuartos frontal','frente','tres cuartos frontal opuesto','lateral','tres cuartos trasero','atrás','tres cuartos trasero opuesto','lateral opuesto','arriba','abajo'];
 let current=0,mode='spin',anchor=null,autoTimer=null,autoSteps=0;
-function show(i){current=(i+8)%8;const n=mode==='top'?8:mode==='bottom'?9:current;car.src=frames[n];car.alt=`Réplica del Mercedes: ${descriptions[n]}`;document.getElementById('view-count').textContent=mode==='spin'?`${String(current+1).padStart(2,'0')} / 08`:'360°';document.querySelectorAll('#view-progress span').forEach((dot,j)=>dot.classList.toggle('selected',mode==='spin'&&j===current));for(const id of ['spin','top','bottom'])document.getElementById(id).setAttribute('aria-pressed',String(mode===id));}
+function show(i){current=(i+8)%8;const n=mode==='top'?8:mode==='bottom'?9:current;car.src=frames[n];viewer.classList.toggle('lateral',mode==='spin'&&(current===3||current===7));car.alt=`Réplica del Mercedes: ${descriptions[n]}`;document.getElementById('view-count').textContent=mode==='spin'?`${String(current+1).padStart(2,'0')} / 08`:'360°';document.querySelectorAll('#view-progress span').forEach((dot,j)=>dot.classList.toggle('selected',mode==='spin'&&j===current));for(const id of ['spin','top','bottom'])document.getElementById(id).setAttribute('aria-pressed',String(mode===id));}
 function stop(){clearInterval(autoTimer);autoTimer=null;}
 function step(n){mode='spin';show(current+n);}
 for(const id of ['spin','top','bottom'])document.getElementById(id).addEventListener('click',()=>{stop();mode=id;show(current);});

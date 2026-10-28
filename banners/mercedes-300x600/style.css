@@ -38,3 +38,7 @@
 @keyframes top-light{0%,100%{opacity:0;transform:translateX(-24px) rotate(-13deg)}35%{opacity:.55}65%{opacity:.38;transform:translateX(38px) rotate(11deg)}}
 @keyframes top-light-secondary{0%,100%{opacity:0;transform:translateX(10px) rotate(12deg)}45%{opacity:.45}70%{opacity:.28;transform:translateX(-32px) rotate(-12deg)}}
 @media(prefers-reduced-motion:reduce){.banner::before,.banner::after{animation:none;opacity:0}}
+
+/* Las vistas de perfil ocupan todo el ancho del banner. */
+.viewer.lateral img{transform:scale(1.16);transform-origin:50% 68%}
+.viewer.lateral::before{left:25px;width:248px}
