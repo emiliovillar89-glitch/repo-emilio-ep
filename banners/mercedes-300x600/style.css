@@ -47,3 +47,15 @@
 @keyframes cta-gentle-pulse{0%,12%,100%{transform:scale(1);box-shadow:0 3px 8px #00252960}5%{transform:scale(1.025);box-shadow:0 3px 12px #ff514d60}}
 .cta:hover,.cta:focus-visible,.cta:active{animation:none;transform:scale(1)}
 @media(prefers-reduced-motion:reduce){.cta{animation:none;will-change:auto}}
+
+/* Invitación gestual al giro, sin paginado. */
+.rotate-hint{position:absolute;left:56px;top:437px;z-index:4;display:flex;align-items:center;justify-content:center;gap:8px;width:185px;height:33px;padding:0 8px;border-radius:18px;background:#003f48dc;border:1px solid #81e2e45c;color:#fff;font-size:9px;font-weight:700;letter-spacing:.6px;line-height:normal}
+.rotate-hint[aria-pressed=true]{background:#003f48dc}.rotate-hint:hover{background:#086772}
+.swipe-motion{display:inline-block;font-size:27px;font-weight:normal;line-height:20px;animation:swipe-invitation 3.6s ease-in-out .5s 6}
+@keyframes swipe-invitation{0%,15%,85%,100%{transform:translateX(0);opacity:.7}38%{transform:translateX(-7px);opacity:1}65%{transform:translateX(7px);opacity:1}}
+.rotate-hint.interacted .swipe-motion{animation:none}
+.angle-controls{position:absolute;right:7px;top:378px;z-index:5;display:flex;flex-direction:column;gap:5px}
+.angle-controls button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;width:43px;height:36px;padding:2px;border-radius:8px;background:#003f48e8;border:1px solid #81e2e46b;color:#fff;font:700 7px Arial;letter-spacing:.5px;line-height:normal}
+.angle-controls button span{font-size:18px;line-height:18px}.angle-controls button:hover,.angle-controls button[aria-pressed=true]{background:#0f858d;border-color:#d8ffff}
+.rotate-hint:focus-visible,.angle-controls button:focus-visible{outline:2px solid #fff100;outline-offset:2px}
+@media(prefers-reduced-motion:reduce){.swipe-motion{animation:none}}

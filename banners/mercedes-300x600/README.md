@@ -2,7 +2,7 @@
 
 Abrir `index.html` directamente en el navegador o servir esta carpeta con `python -m http.server 8000`.
 
-Banner HTML/CSS/JavaScript sin dependencias. Arrastrar el auto o usar flechas del teclado. Botones ↑ y ↓ muestran las fotografías superior e inferior. El giro inicial dura dos vueltas (10,4 segundos) y se detiene al interactuar, ocultar la pestaña o al finalizar; respeta movimiento reducido.
+Banner HTML/CSS/JavaScript sin dependencias. Arrastrar el auto o usar flechas del teclado. Una indicación animada invita a arrastrar; los botones laterales ARRIBA y ABAJO muestran las fotografías superior e inferior. Pulsar el mismo botón de nuevo o la indicación de giro vuelve a las vistas alrededor. No hay paginado. El giro inicial dura dos vueltas (10,4 segundos) y se detiene al interactuar, ocultar la pestaña o al finalizar; respeta movimiento reducido.
 
 ## Imágenes
 
