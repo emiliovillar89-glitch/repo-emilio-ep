@@ -15,3 +15,10 @@
 /* Club horizontal y cabecera con bordes alineados. */
 .elpais{left:24px;top:22px;width:250px;height:auto}
 .club{left:14px;top:483px;width:270px;height:56px}
+
+/* Ajustes de jerarquía y espaciado. */
+.elpais{left:24px;top:28px;width:170px;height:auto}
+.price{right:16px;width:108px;height:108px}
+.diecast{left:12px;top:366px;width:73px;height:73px}
+.view-controls{left:50%;transform:translateX(-50%);top:435px}
+.cta{top:548px}
