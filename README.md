@@ -33,3 +33,8 @@ Tráfico debe validar la creatividad en GAM, destino/seguimiento de clics, venta
 Cada carpeta tiene HTML, CSS, JavaScript y logo propios para una entrega independiente. En 320×50 y 320×75 se secuencian logo, titular, subtítulo y buscador; el buscador queda visible y empieza a escribir después de 7 segundos. Las frases de ejemplo se acortan para que entren. En 1440×120 y 300×600 se conserva todo el contenido en la composición final. Los colores, animación de logo y salida por clickTag se mantienen.
 
 La galería de la raíz muestra los cinco formatos a tamaño real. Para empaquetar cada variante se debe comprimir el contenido de su carpeta, con index.html en la raíz del ZIP. Pendiente validación visual en navegador y tráfico en GAM.
+
+
+## Mercedes AMG Petronas — 300×600
+
+Nueva creatividad en [banners/mercedes-300x600/](banners/mercedes-300x600/README.md), con diez recortes transparentes, giro interactivo y botón SOLICITAR con clickTag. [ZIP](banners/mercedes-300x600.zip). Abrir su index.html para verla localmente.
