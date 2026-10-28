@@ -11,3 +11,7 @@
 .banner{background-size:450px 900px;background-position:center bottom}
 .viewer::before{content:"";position:absolute;left:38px;top:137px;width:222px;height:18px;background:radial-gradient(ellipse,#00191de0 0%,#002b3290 40%,transparent 72%);filter:blur(4px);pointer-events:none;z-index:-1}
 .viewer img{filter:drop-shadow(0 3px 2px #00252b80)}
+
+/* Club horizontal y cabecera con bordes alineados. */
+.elpais{left:24px;top:22px;width:250px;height:auto}
+.club{left:14px;top:483px;width:270px;height:56px}
