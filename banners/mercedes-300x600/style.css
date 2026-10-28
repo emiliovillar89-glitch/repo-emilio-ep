@@ -22,3 +22,12 @@
 .diecast{left:12px;top:366px;width:73px;height:73px}
 .view-controls{left:50%;transform:translateX(-50%);top:435px}
 .cta{top:548px}
+
+/* Navegación de alto contraste, contador y progreso de ocho vistas. */
+.view-controls{top:440px;left:50%;transform:translateX(-50%);width:218px;height:34px;display:flex;justify-content:center;gap:3px;padding:3px 5px;background:#003e47ed;border:1px solid #68d9dc70;border-radius:20px;box-shadow:0 2px 6px #00262e40}
+.view-controls button{height:26px;min-width:26px;padding:0 5px;border-radius:50%;background:transparent;color:#fff;font-size:17px;line-height:24px}
+.view-controls #prev,.view-controls #next{font-size:25px;font-weight:normal;min-width:28px}
+.view-controls #spin{width:78px;border-radius:7px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:14px;font-size:11px;font-weight:700;letter-spacing:1px}
+.view-controls button:hover,.view-controls button[aria-pressed=true]{background:#157980}
+.separator{height:18px;border-left:1px solid #70c7cc70;margin:4px 2px}
+#view-progress{display:flex;gap:2px;margin-top:3px}#view-progress span{width:6px;height:3px;border-radius:2px;background:#78aeb1}#view-progress span.selected{background:#fff}
