@@ -42,3 +42,8 @@
 /* Las vistas de perfil ocupan todo el ancho del banner. */
 .viewer.lateral img{transform:scale(1.16);transform-origin:50% 68%}
 .viewer.lateral::before{left:25px;width:248px}
+/* Pulso breve cada seis segundos; se detiene al interactuar. */
+.cta{animation:cta-gentle-pulse 6s ease-in-out 1s 4;transform-origin:center;will-change:transform}
+@keyframes cta-gentle-pulse{0%,12%,100%{transform:scale(1);box-shadow:0 3px 8px #00252960}5%{transform:scale(1.025);box-shadow:0 3px 12px #ff514d60}}
+.cta:hover,.cta:focus-visible,.cta:active{animation:none;transform:scale(1)}
+@media(prefers-reduced-motion:reduce){.cta{animation:none;will-change:auto}}
