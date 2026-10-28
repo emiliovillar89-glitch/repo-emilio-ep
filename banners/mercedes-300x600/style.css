@@ -67,3 +67,7 @@
 @keyframes oval-rotation-hint{0%,12%,88%,100%{transform:translateX(0) scaleX(1);opacity:.8}35%{transform:translateX(-5px) scaleX(.94);opacity:1}65%{transform:translateX(5px) scaleX(1.04);opacity:1}}
 .rotate-hint.interacted .oval-arrow{animation:none}
 @media(prefers-reduced-motion:reduce){.oval-arrow{animation:none}}
+
+/* Indicación más tenue: opacidad constante del 60 %. */
+.rotation-oval{opacity:.6;filter:none}
+@keyframes oval-rotation-hint{0%,12%,88%,100%{transform:translateX(0) scaleX(1)}35%{transform:translateX(-3px) scaleX(.98)}65%{transform:translateX(3px) scaleX(1.02)}}
