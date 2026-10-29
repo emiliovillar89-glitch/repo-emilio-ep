@@ -47,3 +47,5 @@
 .w320[data-frame="2"] .hero{left:96px;top:2px;width:127px;height:45px;opacity:1}
 .w320.copy-complete .hero{display:block}
 @media(prefers-reduced-motion:reduce){.w320 .hero{display:block}.w320 .copy{display:none!important}}
+
+.w600[data-frame="1"] .hero{left:131px}
