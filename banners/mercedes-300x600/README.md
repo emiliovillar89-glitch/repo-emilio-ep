@@ -21,3 +21,8 @@ Incluye `ad.size` 300×600 y `clickTag`. Comprimir solamente `index.html`, `styl
 ## Verificación
 
 Sintaxis JavaScript revisada. Giro con cursor y vista superior comprobados en navegador. Diez imágenes con alfa intacto. Pendiente validación de carga y seguimiento de clic en el Ad Manager de destino.
+
+
+## Recursos alojados (29/10/2026)
+
+Esta versión carga todas las imágenes desde https://servicios.elpais.com.uy/coleccionables/mercedes-300x600_/assets/ mediante HTTPS. El ZIP ahora contiene solamente index.html, style.css y script.js; requiere conexión al servidor. Se conservan los recursos en assets/ del repositorio como respaldo, pero no se incluyen en el ZIP. El diseño, animaciones y clickTag se mantienen. La carga final debe validarse en Ad Manager.

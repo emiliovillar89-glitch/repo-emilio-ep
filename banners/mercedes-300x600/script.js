@@ -1,6 +1,6 @@
 'use strict';
 // Change assetBase to an absolute HTTPS directory after hosting the images.
-const assetBase = 'assets/';
+const assetBase = 'https://servicios.elpais.com.uy/coleccionables/mercedes-300x600_/assets/';
 const frames = Array.from({length:10},(_,i)=>`${assetBase}car-${String(i).padStart(2,'0')}.png`);
 const car=document.getElementById('car'),viewer=document.getElementById('viewer');
 const descriptions=['tres cuartos frontal','frente','tres cuartos frontal opuesto','lateral','tres cuartos trasero','atrás','tres cuartos trasero opuesto','lateral opuesto','arriba','abajo'];
