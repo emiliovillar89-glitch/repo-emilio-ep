@@ -25,3 +25,16 @@
 .w600[data-frame="1"] .price{left:415px;top:7px;width:76px;height:76px}
 .w600[data-frame="1"] .cta{left:501px;top:28px;width:86px;height:34px;font-size:12px}
 .w600[data-frame="1"]:before{background:linear-gradient(90deg,#002b3acc 0%,#00465438 38%,#00465438 68%,#00313da6 100%)}
+
+/* Luces suaves del 600×90 detrás de la composición. */
+.w600:after{content:"";position:absolute;inset:-70px -100px;pointer-events:none;z-index:0;background:linear-gradient(115deg,transparent 25%,#bdfff61f 34%,#b9fff54a 36%,transparent 40%,transparent 55%,#85dfff28 60%,transparent 64%);filter:blur(6px);animation:mercedes-light-sweep 7s ease-in-out 0s 4 both}
+.w600 .brand,.w600 .amg,.w600 .hero,.w600 .price,.w600 .copy{z-index:1}
+@keyframes mercedes-light-sweep{0%,100%{transform:translateX(-90px);opacity:0}25%{opacity:.65}65%{transform:translateX(150px);opacity:.5}85%{opacity:0}}
+/* Pulso leve y brillo breve; nunca bloquea el enlace. */
+.w600 .cta{overflow:hidden;isolation:isolate;animation:mercedes-cta-invite 5.5s ease-in-out 1s 5}
+.w600 .cta:after{content:"";position:absolute;top:-30%;left:-65%;width:38%;height:160%;background:linear-gradient(90deg,transparent,#ffffff60,transparent);transform:skewX(-22deg);pointer-events:none;animation:mercedes-cta-sheen 5.5s ease-in-out 1s 5}
+@keyframes mercedes-cta-invite{0%,18%,100%{transform:scale(1);box-shadow:0 2px 5px #002c3c40}8%{transform:scale(1.035);box-shadow:0 2px 11px #ff524b65}}
+@keyframes mercedes-cta-sheen{0%,5%{left:-65%;opacity:0}7%{opacity:1}21%{left:150%;opacity:0}100%{left:150%;opacity:0}}
+.w600 .cta:hover,.w600 .cta:focus-visible{animation:none;transform:scale(1.025);background:#ff3832}
+.w600 .cta:hover:after,.w600 .cta:focus-visible:after{animation:none;opacity:0}
+@media(prefers-reduced-motion:reduce){.w600:after,.w600 .cta:after{animation:none!important;opacity:0}.w600 .cta{animation:none!important;transform:none!important}}
