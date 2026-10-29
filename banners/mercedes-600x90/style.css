@@ -17,3 +17,11 @@
 .mini-line{display:none}.mini-line.visible{display:block}.mini-line .hi{padding:0 3px}
 .w320.copy-complete .hero{display:none}.w320.copy-complete .copy{width:214px;font-size:9px;line-height:1.25}.w320.copy-complete .mini-line{display:inline}.w320.copy-complete .mini-line br{display:none}
 @media(prefers-reduced-motion:reduce){.w320 .hero{display:none}.w320 .copy{width:214px!important;font-size:9px!important;line-height:1.25!important;display:block!important}.w320 .mini-line{display:inline}.w320 .mini-line br{display:none}}
+
+/* Primer fotograma 600×90: marca agrupada, auto protagonista y oferta separada. */
+.w600[data-frame="1"] .brand{left:12px;top:8px;width:122px}
+.w600[data-frame="1"] .amg{left:16px;top:61px;width:114px;height:22px}
+.w600[data-frame="1"] .hero{left:143px;top:6px;width:264px;height:77px}
+.w600[data-frame="1"] .price{left:415px;top:7px;width:76px;height:76px}
+.w600[data-frame="1"] .cta{left:501px;top:28px;width:86px;height:34px;font-size:12px}
+.w600[data-frame="1"]:before{background:linear-gradient(90deg,#002b3acc 0%,#00465438 38%,#00465438 68%,#00313da6 100%)}
