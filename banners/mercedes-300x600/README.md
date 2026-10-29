@@ -26,3 +26,8 @@ Sintaxis JavaScript revisada. Giro con cursor y vista superior comprobados en na
 ## Recursos alojados (29/10/2026)
 
 Esta versión carga todas las imágenes desde https://servicios.elpais.com.uy/coleccionables/mercedes-300x600_/assets/ mediante HTTPS. El ZIP ahora contiene solamente index.html, style.css y script.js; requiere conexión al servidor. Se conservan los recursos en assets/ del repositorio como respaldo, pero no se incluyen en el ZIP. El diseño, animaciones y clickTag se mantienen. La carga final debe validarse en Ad Manager.
+
+
+## Entrega consolidada
+
+El index.html de entrega incorpora todos sus estilos y JavaScript. El ZIP contiene únicamente ese HTML; las imágenes se siguen cargando desde el servidor de El País. No necesita los archivos style.css y script.js externos, que quedan como fuentes de referencia. Esto evita mezclar los estilos de otros formatos al extraer o subir varios banners.

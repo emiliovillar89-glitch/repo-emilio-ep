@@ -1,5 +1,80 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="ad.size" content="width=300,height=600"><title>Mercedes AMG Petronas · 300×600</title><link rel="stylesheet" href="style.css"><script>var clickTag = "https://coleccionables.elpais.com.uy/coleccion/mercedes-amg-petronas-f1-team/";</script><script src="script.js" defer></script></head>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="ad.size" content="width=300,height=600"><title>Mercedes AMG Petronas · 300×600</title><style>
+*{box-sizing:border-box}html,body{margin:0;width:300px;height:600px;overflow:hidden}body{font-family:Arial,sans-serif}.banner{position:relative;width:300px;height:600px;overflow:hidden;background:#004950 url('https://servicios.elpais.com.uy/coleccionables/mercedes-300x600_/assets/fondo.jpg') center/300px 600px no-repeat;border:1px solid #13636a}.banner>img{position:absolute;object-fit:contain;pointer-events:none}.elpais{left:40px;top:13px;width:220px;height:26px}.autos{left:24px;top:48px;width:250px;height:88px}.amg{left:39px;top:148px;width:220px;height:78px}.viewer{position:absolute;left:0;top:219px;width:298px;height:190px;cursor:grab;touch-action:none;user-select:none}.viewer:active{cursor:grabbing}.viewer img{width:100%;height:100%;object-fit:contain;pointer-events:none;filter:drop-shadow(0 10px 6px #002c3460)}.view-controls{position:absolute;top:393px;left:66px;display:flex;align-items:center;gap:3px}button{border:0;background:#003d46a6;color:white;border-radius:12px;height:23px;min-width:23px;padding:0 6px;font:11px Arial;cursor:pointer}button[aria-pressed=true]{background:#007c87}button:hover{background:#009ba6}button:focus-visible,.cta:focus-visible,.viewer:focus-visible{outline:2px solid #fff100;outline-offset:2px}.price{left:29px;top:423px;width:78px;height:78px}.diecast{right:31px;top:423px;width:78px;height:78px}.club{left:12px;top:502px;width:100px;height:89px;object-fit:contain!important}.cta{position:absolute;left:137px;top:546px;width:149px;height:39px;display:flex;align-items:center;justify-content:center;background:#e92120;color:#fff;text-decoration:none;font-weight:800;font-size:17px;letter-spacing:.7px;border-radius:4px;box-shadow:0 3px 8px #00252960}.cta:hover{background:#ff3430}
+/* Composición ajustada: precio detrás y emblema delante del auto. */
+.elpais{top:20px;height:22px}.autos{top:45px}.amg{top:141px}
+.price{left:auto;right:12px;top:220px;width:116px;height:116px;z-index:1}
+.viewer{top:265px;z-index:2}
+.diecast{left:7px;right:auto;top:379px;width:90px;height:90px;z-index:3}
+.view-controls{top:435px;left:112px;z-index:4;gap:0}
+.club{left:84px;top:458px;width:130px;height:90px;z-index:3}
+.cta{left:44px;top:557px;width:210px;height:34px;z-index:4}
+/* La calle empieza detrás de las ruedas; sombra independiente de la foto. */
+.banner{background-size:450px 900px;background-position:center bottom}
+.viewer::before{content:"";position:absolute;left:38px;top:137px;width:222px;height:18px;background:radial-gradient(ellipse,#00191de0 0%,#002b3290 40%,transparent 72%);filter:blur(4px);pointer-events:none;z-index:-1}
+.viewer img{filter:drop-shadow(0 3px 2px #00252b80)}
+
+/* Club horizontal y cabecera con bordes alineados. */
+.elpais{left:24px;top:22px;width:250px;height:auto}
+.club{left:14px;top:483px;width:270px;height:56px}
+
+/* Ajustes de jerarquía y espaciado. */
+.elpais{left:24px;top:31.5px;width:127.5px;height:auto}
+.price{right:16px;width:108px;height:108px}
+.diecast{left:12px;top:366px;width:73px;height:73px}
+.view-controls{left:50%;transform:translateX(-50%);top:435px}
+.cta{top:548px}
+
+/* Navegación de alto contraste, contador y progreso de ocho vistas. */
+.view-controls{top:440px;left:50%;transform:translateX(-50%);width:218px;height:34px;display:flex;justify-content:center;gap:3px;padding:3px 5px;background:#003e47ed;border:1px solid #68d9dc70;border-radius:20px;box-shadow:0 2px 6px #00262e40}
+.view-controls button{height:26px;min-width:26px;padding:0 5px;border-radius:50%;background:transparent;color:#fff;font-size:17px;line-height:24px}
+.view-controls #prev,.view-controls #next{font-size:25px;font-weight:normal;min-width:28px}
+.view-controls #spin{width:78px;border-radius:7px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:14px;font-size:11px;font-weight:700;letter-spacing:1px}
+.view-controls button:hover,.view-controls button[aria-pressed=true]{background:#157980}
+.separator{height:18px;border-left:1px solid #70c7cc70;margin:4px 2px}
+#view-progress{display:flex;gap:2px;margin-top:3px}#view-progress span{width:6px;height:3px;border-radius:2px;background:#78aeb1}#view-progress span.selected{background:#fff}
+/* Reflejos superiores tenues sobre el fondo, debajo de los logos. */
+.banner::before,.banner::after{content:"";position:absolute;pointer-events:none;left:-75px;top:-75px;width:240px;height:290px;z-index:0;opacity:0;filter:blur(13px);transform-origin:top center;background:conic-gradient(from 152deg at 50% 0%,transparent 0deg,#8effee42 9deg,#d5fff71f 16deg,transparent 27deg);animation:top-light 9s ease-in-out 0s 3 both}
+.banner::after{left:145px;top:-100px;width:220px;height:310px;background:conic-gradient(from 155deg at 50% 0%,transparent 0deg,#8ddfff35 10deg,#bfffee24 17deg,transparent 28deg);animation-name:top-light-secondary;animation-delay:1s}
+.elpais,.autos,.amg{z-index:1}
+@keyframes top-light{0%,100%{opacity:0;transform:translateX(-24px) rotate(-13deg)}35%{opacity:.55}65%{opacity:.38;transform:translateX(38px) rotate(11deg)}}
+@keyframes top-light-secondary{0%,100%{opacity:0;transform:translateX(10px) rotate(12deg)}45%{opacity:.45}70%{opacity:.28;transform:translateX(-32px) rotate(-12deg)}}
+@media(prefers-reduced-motion:reduce){.banner::before,.banner::after{animation:none;opacity:0}}
+
+/* Las vistas de perfil ocupan todo el ancho del banner. */
+.viewer.lateral img{transform:scale(1.16);transform-origin:50% 68%}
+.viewer.lateral::before{left:25px;width:248px}
+/* Pulso breve cada seis segundos; se detiene al interactuar. */
+.cta{animation:cta-gentle-pulse 6s ease-in-out 1s 4;transform-origin:center;will-change:transform}
+@keyframes cta-gentle-pulse{0%,12%,100%{transform:scale(1);box-shadow:0 3px 8px #00252960}5%{transform:scale(1.025);box-shadow:0 3px 12px #ff514d60}}
+.cta:hover,.cta:focus-visible,.cta:active{animation:none;transform:scale(1)}
+@media(prefers-reduced-motion:reduce){.cta{animation:none;will-change:auto}}
+
+/* Invitación gestual al giro, sin paginado. */
+.rotate-hint{position:absolute;left:56px;top:437px;z-index:4;display:flex;align-items:center;justify-content:center;gap:8px;width:185px;height:33px;padding:0 8px;border-radius:18px;background:#003f48dc;border:1px solid #81e2e45c;color:#fff;font-size:9px;font-weight:700;letter-spacing:.6px;line-height:normal}
+.rotate-hint[aria-pressed=true]{background:#003f48dc}.rotate-hint:hover{background:#086772}
+.swipe-motion{display:inline-block;font-size:27px;font-weight:normal;line-height:20px;animation:swipe-invitation 3.6s ease-in-out .5s 6}
+@keyframes swipe-invitation{0%,15%,85%,100%{transform:translateX(0);opacity:.7}38%{transform:translateX(-7px);opacity:1}65%{transform:translateX(7px);opacity:1}}
+.rotate-hint.interacted .swipe-motion{animation:none}
+.angle-controls{position:absolute;right:7px;top:378px;z-index:5;display:flex;flex-direction:column;gap:5px}
+.angle-controls button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;width:43px;height:36px;padding:2px;border-radius:8px;background:#003f48e8;border:1px solid #81e2e46b;color:#fff;font:700 7px Arial;letter-spacing:.5px;line-height:normal}
+.angle-controls button span{font-size:18px;line-height:18px}.angle-controls button:hover,.angle-controls button[aria-pressed=true]{background:#0f858d;border-color:#d8ffff}
+.rotate-hint:focus-visible,.angle-controls button:focus-visible{outline:2px solid #fff100;outline-offset:2px}
+@media(prefers-reduced-motion:reduce){.swipe-motion{animation:none}}
+
+/* Flecha ovalada blanca, sin placa ni texto. */
+.rotate-hint,.rotate-hint[aria-pressed=true],.rotate-hint:hover,.rotate-hint:active{left:87px;top:432px;width:124px;height:45px;padding:0;background:transparent;border:0;border-radius:0;box-shadow:none}
+.rotation-oval{display:block;width:112px;height:42px;overflow:visible;filter:drop-shadow(0 1px 2px #003e4770)}
+.oval-arrow{transform-origin:60px 24px;animation:oval-rotation-hint 3.8s ease-in-out .4s 6}
+@keyframes oval-rotation-hint{0%,12%,88%,100%{transform:translateX(0) scaleX(1);opacity:.8}35%{transform:translateX(-5px) scaleX(.94);opacity:1}65%{transform:translateX(5px) scaleX(1.04);opacity:1}}
+.rotate-hint.interacted .oval-arrow{animation:none}
+@media(prefers-reduced-motion:reduce){.oval-arrow{animation:none}}
+
+/* Indicación más tenue: opacidad constante del 60 %. */
+.rotation-oval{opacity:.6;filter:none}
+@keyframes oval-rotation-hint{0%,12%,88%,100%{transform:translateX(0) scaleX(1)}35%{transform:translateX(-3px) scaleX(.98)}65%{transform:translateX(3px) scaleX(1.02)}}
+
+</style><script>var clickTag = "https://coleccionables.elpais.com.uy/coleccion/mercedes-amg-petronas-f1-team/";</script></head>
 <body><main class="banner" aria-label="Autos de carrera armables Mercedes AMG Petronas">
 <img class="elpais" src="https://servicios.elpais.com.uy/coleccionables/mercedes-300x600_/assets/elpais.png" alt="El País presenta"><img class="autos" src="https://servicios.elpais.com.uy/coleccionables/mercedes-300x600_/assets/autos.png" alt="Autos de carrera armables"><img class="amg" src="https://servicios.elpais.com.uy/coleccionables/mercedes-300x600_/assets/amg.png" alt="Mercedes AMG Petronas Formula One Team">
 <div id="viewer" class="viewer" tabindex="0" role="group" aria-label="Auto giratorio: arrastrá o usá las flechas del teclado"><img id="car" src="https://servicios.elpais.com.uy/coleccionables/mercedes-300x600_/assets/car-00.png" alt="Réplica del Mercedes, vista tres cuartos frontal" draggable="false"></div>
@@ -7,4 +82,28 @@
 <div class="angle-controls" aria-label="Vistas adicionales"><button id="top" aria-label="Ver desde arriba" aria-pressed="false"><span aria-hidden="true">↑</span>ARRIBA</button><button id="bottom" aria-label="Ver desde abajo" aria-pressed="false"><span aria-hidden="true">↓</span>ABAJO</button></div>
 <img class="price" src="https://servicios.elpais.com.uy/coleccionables/mercedes-300x600_/assets/precio.png" alt="A solo 520 pesos cada entrega"><img class="diecast" src="https://servicios.elpais.com.uy/coleccionables/mercedes-300x600_/assets/diecast.png" alt="Die-Cast escala 1:18"><img class="club" src="https://servicios.elpais.com.uy/coleccionables/mercedes-300x600_/assets/club.png" alt="Club El País: 20% de descuento en colección completa en única entrega. Hasta 6 cuotas sin recargo con tarjeta de crédito.">
 <a id="cta" class="cta" href="https://coleccionables.elpais.com.uy/coleccion/mercedes-amg-petronas-f1-team/" target="_blank" rel="noopener noreferrer">SOLICITAR</a>
-</main></body></html>
+</main><script>
+'use strict';
+// Change assetBase to an absolute HTTPS directory after hosting the images.
+const assetBase = 'https://servicios.elpais.com.uy/coleccionables/mercedes-300x600_/assets/';
+const frames = Array.from({length:10},(_,i)=>`${assetBase}car-${String(i).padStart(2,'0')}.png`);
+const car=document.getElementById('car'),viewer=document.getElementById('viewer');
+const descriptions=['tres cuartos frontal','frente','tres cuartos frontal opuesto','lateral','tres cuartos trasero','atrás','tres cuartos trasero opuesto','lateral opuesto','arriba','abajo'];
+let current=0,mode='spin',anchor=null,autoTimer=null,autoSteps=0;
+function show(i){current=(i+8)%8;const n=mode==='top'?8:mode==='bottom'?9:current;car.src=frames[n];viewer.classList.toggle('lateral',mode==='spin'&&(current===3||current===7));car.alt=`Réplica del Mercedes: ${descriptions[n]}`;for(const id of ['spin','top','bottom'])document.getElementById(id).setAttribute('aria-pressed',String(mode===id));}
+function stop(){clearInterval(autoTimer);autoTimer=null;document.querySelector('.rotate-hint').classList.add('interacted');}
+function step(n){mode='spin';show(current+n);}
+for(const id of ['spin','top','bottom'])document.getElementById(id).addEventListener('click',()=>{stop();mode=mode===id?'spin':id;show(current);});
+viewer.addEventListener('pointerdown',e=>{if(e.button!==0)return;stop();anchor=e.clientX;viewer.setPointerCapture(e.pointerId);});
+viewer.addEventListener('pointermove',e=>{if(anchor===null)return;const delta=e.clientX-anchor;if(Math.abs(delta)>=22){step(delta>0?-1:1);anchor=e.clientX;}});
+for(const event of ['pointerup','pointercancel','lostpointercapture'])viewer.addEventListener(event,()=>{anchor=null;});
+viewer.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();stop();step(e.key==='ArrowRight'?1:-1);}});
+document.getElementById('cta').addEventListener('click',function(){this.href=window.clickTag;});
+frames.forEach(src=>{const image=new Image();image.src=src;});
+show(0);
+// Two turns only (10.4 s); interaction and hidden tabs stop animation.
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){autoTimer=setInterval(()=>{step(1);if(++autoSteps===16){stop();show(0);}},650);}
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
+
+</script></body></html>
+
