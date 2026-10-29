@@ -1,3 +1,3 @@
 # Mercedes 320x50
 
-Dos fotogramas, sin giro, con recursos externos por HTTPS y clickTag. El primero dura 3,5 segundos y el segundo 3,5; tres pasadas, terminando en el mensaje de 10 entregas. Botón visible siempre. Movimiento reducido muestra el mensaje final. Abrir index.html con conexión a internet. Pendiente validación en Google Ad Manager.
+Dos fotogramas: presentación (3,5 s) y mensaje con giro fotográfico automático (8 vistas), sin interacción. Movimiento total limitado a 27 s. El 320×50 muestra el texto completo en tres frases de 2,3 s; al terminar reúne el texto en pequeño para mantenerlo visible. Movimiento reducido muestra texto completo estático. Recursos externos HTTPS y clickTag. Pendiente validación en Ad Manager.
