@@ -38,3 +38,12 @@
 .w600 .cta:hover,.w600 .cta:focus-visible{animation:none;transform:scale(1.025);background:#ff3832}
 .w600 .cta:hover:after,.w600 .cta:focus-visible:after{animation:none;opacity:0}
 @media(prefers-reduced-motion:reduce){.w600:after,.w600 .cta:after{animation:none!important;opacity:0}.w600 .cta{animation:none!important;transform:none!important}}
+
+/* Segundo fotograma sin texto: más espacio para el giro del auto. */
+.banner .copy{display:none!important}
+.w600[data-frame="2"] .hero{left:141px;top:4px;width:340px;height:81px;opacity:1}
+.w600[data-frame="2"] .cta{left:493px;width:94px}
+.w320[data-frame="2"] .brand{opacity:1}
+.w320[data-frame="2"] .hero{left:96px;top:2px;width:127px;height:45px;opacity:1}
+.w320.copy-complete .hero{display:block}
+@media(prefers-reduced-motion:reduce){.w320 .hero{display:block}.w320 .copy{display:none!important}}

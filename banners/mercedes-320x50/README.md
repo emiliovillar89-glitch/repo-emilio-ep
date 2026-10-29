@@ -1,3 +1,3 @@
 # Mercedes 320x50
 
-Dos fotogramas: presentación (3,5 s) y mensaje con giro fotográfico automático (8 vistas), sin interacción. Movimiento total limitado a 27 s. El 320×50 muestra el texto completo en tres frases de 2,3 s; al terminar reúne el texto en pequeño para mantenerlo visible. Movimiento reducido muestra texto completo estático. Recursos externos HTTPS y clickTag. Pendiente validación en Ad Manager.
+Primer fotograma de presentación y segundo sin texto, con auto ampliado y giro automático. Botón SOLICITAR siempre visible. Recursos externos por HTTPS y clickTag. Animación limitada a 27 segundos; movimiento reducido mantiene una vista fija. Pendiente validación en Ad Manager.

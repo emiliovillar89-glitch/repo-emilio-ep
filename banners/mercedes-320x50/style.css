@@ -17,3 +17,12 @@
 .mini-line{display:none}.mini-line.visible{display:block}.mini-line .hi{padding:0 3px}
 .w320.copy-complete .hero{display:none}.w320.copy-complete .copy{width:214px;font-size:9px;line-height:1.25}.w320.copy-complete .mini-line{display:inline}.w320.copy-complete .mini-line br{display:none}
 @media(prefers-reduced-motion:reduce){.w320 .hero{display:none}.w320 .copy{width:214px!important;font-size:9px!important;line-height:1.25!important;display:block!important}.w320 .mini-line{display:inline}.w320 .mini-line br{display:none}}
+
+/* Segundo fotograma sin texto: más espacio para el giro del auto. */
+.banner .copy{display:none!important}
+.w600[data-frame="2"] .hero{left:141px;top:4px;width:340px;height:81px;opacity:1}
+.w600[data-frame="2"] .cta{left:493px;width:94px}
+.w320[data-frame="2"] .brand{opacity:1}
+.w320[data-frame="2"] .hero{left:96px;top:2px;width:127px;height:45px;opacity:1}
+.w320.copy-complete .hero{display:block}
+@media(prefers-reduced-motion:reduce){.w320 .hero{display:block}.w320 .copy{display:none!important}}
